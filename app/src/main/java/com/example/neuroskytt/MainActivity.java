@@ -179,9 +179,12 @@ public class MainActivity extends AppCompatActivity {
 
         if((tipo_seleccionado!=-1 && !estrendada) || clasificar){
             RequestQueue queue = Volley.newRequestQueue(this);
-            String url ="http://192.168.3.20:8000/polls?tipo="+tipo_seleccionado;
+            //String url ="http://192.168.3.20:8000/polls?tipo="+tipo_seleccionado;
+            String url ="http://192.168.1.15:8000/polls?tipo="+tipo_seleccionado;
             if(clasificar){
-                url ="http://192.168.3.20:8000/polls/clasifica";
+                //url ="http://192.168.3.20:8000/polls/clasifica";
+                url ="http://192.168.1.15:8000/polls/clasifica";
+
                 System.out.println(params);
             }
 
@@ -249,7 +252,9 @@ public class MainActivity extends AppCompatActivity {
         params.put("", "");
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://192.168.3.20:8000/polls/entrena";
+
+        //String url ="http://192.168.3.20:8000/polls/entrena";
+        String url ="http://192.168.1.15:8000/polls/entrena";
         JsonObjectRequest stringRequest = null;
 
 
